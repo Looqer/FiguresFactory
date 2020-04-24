@@ -12,6 +12,8 @@ public class FabrykaFigurGeometrycznych {
 
         FiguraGeometryczna figura = null;
 
+
+
         System.out.println("To będzie: " + jakatofigura);
             System.out.println("To będzie: " + jakatofigura);
             byte[] ba = jakatofigura.getBytes();

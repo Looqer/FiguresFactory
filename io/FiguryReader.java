@@ -20,7 +20,8 @@ public class FiguryReader {
             System.out.println(line);
             String[] linesplitted = line.split("\t");
             System.out.println("FiguryReader działa");
-            FiguraGeometryczna figurateraz = geometryczne.FabrykaFigurGeometrycznych.dajFigure(linesplitted[0]);
+            String testfigury = linesplitted[0];
+            FiguraGeometryczna figurateraz = geometryczne.FabrykaFigurGeometrycznych.dajFigure(testfigury);
             System.out.println("Tu koniec FiguryReader");
             return figurateraz;
         }
