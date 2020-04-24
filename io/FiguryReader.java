@@ -1,9 +1,9 @@
 package io;
 
+import geometryczne.FiguraGeometryczna;
+import geometryczne.NieznanaFiguraException;
+
 import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
 
 public class FiguryReader {
 
@@ -13,15 +13,21 @@ public class FiguryReader {
         memory = input;
     }
 
-    public void nastepnaFigura() throws IOException {
-        String line;
-        line = memory.readLine();
-        System.out.println(line);
-        String[] linesplitted = line.split("\t");
-        System.out.println(linesplitted[0]);
-        System.out.println(linesplitted[1]);
-        System.out.println(linesplitted[2]);
+    public FiguraGeometryczna nastepnaFigura() throws NieznanaFiguraException {
+        try{
+            String line;
+            line = memory.readLine();
+            System.out.println(line);
+            String[] linesplitted = line.split("\t");
+            System.out.println("FiguryReader działa");
+            FiguraGeometryczna figurateraz = geometryczne.FabrykaFigurGeometrycznych.dajFigure(linesplitted[0]);
+            System.out.println("Tu koniec FiguryReader");
+            return figurateraz;
+        }
+        catch(Exception exception ){
+            System.out.println("Nieznananfiguraexception");
+            return null;
+        }
 
-        //return line;
         }
     }

@@ -1,15 +1,14 @@
 package geometryczne;
 
-public class Trojkat extends FiguraGeometryczna {
+public class Kwadrat extends FiguraGeometryczna {
 
     @Override
     public String dajTyp(){
-        return "trojkat";
+        return "kwadrat";
     }
-
     @Override
     public double dajPole(){
-        return 3.21;
+        return 16;
     }
 
 }
