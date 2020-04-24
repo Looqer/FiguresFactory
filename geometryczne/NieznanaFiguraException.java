@@ -1,9 +1,8 @@
 package geometryczne;
 
-public class NieznanaFiguraException extends Throwable {
-    public void nieznana(){
+public class NieznanaFiguraException extends RuntimeException {
 
-        System.out.println("nie znam takiej figury");
+    public NieznanaFiguraException(String errormessage) {
+        super(errormessage);
     }
-
 }

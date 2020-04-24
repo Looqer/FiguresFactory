@@ -1,12 +1,12 @@
 package geometryczne;
 
-public class Kolo extends FiguraGeometryczna {
+public class Trapez extends FiguraGeometryczna {
 
     public String dajTyp(){
-        return "KOŁO";
+        return "TRAPEZ";
     }
 
     public double dajPole(){
-        return 3.14;
+        return 45;
     }
 }

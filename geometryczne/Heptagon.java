@@ -1,12 +1,12 @@
 package geometryczne;
 
-public class Kolo extends FiguraGeometryczna {
+public class Heptagon extends FiguraGeometryczna {
 
     public String dajTyp(){
-        return "KOŁO";
+        return "HEPTAGON";
     }
 
     public double dajPole(){
-        return 3.14;
+        return 8;
     }
 }
