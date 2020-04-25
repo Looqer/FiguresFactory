@@ -1,7 +1,6 @@
 package io;
 
 import geometryczne.FiguraGeometryczna;
-import geometryczne.NiepoprawnyOpisFiguryException;
 import geometryczne.NieznanaFiguraException;
 
 import java.io.BufferedReader;
@@ -21,16 +20,14 @@ public class FiguryReader {
             String line;
             String[] linesplitted = new String[0];
             line = memory.readLine();
-            System.out.println(line);
             try{linesplitted = line.split("\t");}
             catch(NullPointerException err){System.out.println("Koniec pliku");}
 
             FiguraGeometryczna figurateraz = geometryczne.FabrykaFigurGeometrycznych.dajFigure(linesplitted[0]);
 
-            double[] jakisarrayd = Arrays.stream(linesplitted[2].split(",")).mapToDouble(Double::parseDouble).toArray();
+            double[] arrayd = Arrays.stream(linesplitted[2].split(",")).mapToDouble(Double::parseDouble).toArray();
 
-            try{figurateraz.ustawParametry(jakisarrayd,linesplitted[1]);}
-            catch(NullPointerException err){}
+            figurateraz.ustawParametry(arrayd,linesplitted[1]);
 
             return figurateraz;
         }

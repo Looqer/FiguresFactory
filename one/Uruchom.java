@@ -8,8 +8,6 @@ import java.io.*;
 
 public class Uruchom {
 
-
-
     public static void main(String[] args) throws NieznanaFiguraException, IOException {
 
         boolean work = true;
@@ -25,9 +23,6 @@ public class Uruchom {
             figuraprezentowana = figuresset.nastepnaFigura();
             try{System.out.println("Figura " + figuraprezentowana.dajOpis() + " typu " + figuraprezentowana.dajTyp() + " o polu " + figuraprezentowana.dajPole());}
             catch(NullPointerException err){work = false;}
-            System.out.println("--------------------");
         }
-
     }
-
 }

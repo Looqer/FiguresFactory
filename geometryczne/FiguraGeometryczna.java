@@ -23,20 +23,11 @@ public abstract class FiguraGeometryczna {
 
     public void ustawParametry (double[] parametry, String opis) throws NiepoprawnyOpisFiguryException {
 
-        NiepoprawnyOpisFiguryException e = new NiepoprawnyOpisFiguryException("coto sie stalo");
+        NiepoprawnyOpisFiguryException e = new NiepoprawnyOpisFiguryException(String.format("Powinno byc %s parametrow, a jest %d.", Arrays.toString(dajIloscParametrow()), parametry.length));
 
         opisfigury = opis;
-        try{
-            if(IntStream.of(dajIloscParametrow()).anyMatch(a -> a == parametry.length)){
-                System.out.println("super");
-            }
-            else{
+            if(!IntStream.of(dajIloscParametrow()).anyMatch(a -> a == parametry.length)){
                 throw e;
             }
-        }
-        catch(NiepoprawnyOpisFiguryException err){
-            System.out.println("niesuper");
-        }
     }
-
 }

@@ -34,7 +34,7 @@ try{
    
         }
 catch(NieznanaFiguraException err){
-    System.out.println("Figura nierozpoznana");
+    System.out.println("Figura nierozpoznana (catch)");
     figura = null;
         }
         return figura;

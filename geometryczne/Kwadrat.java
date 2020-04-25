@@ -16,5 +16,4 @@ public class Kwadrat extends FiguraGeometryczna {
         super.ustawParametry(parametry, opis);
             bok = parametry[0];
     }
-
 }
