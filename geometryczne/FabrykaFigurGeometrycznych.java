@@ -1,20 +1,13 @@
 package geometryczne;
 
-import java.io.IOException;
-import java.util.Arrays;
-import geometryczne.NieznanaFiguraException;
-
 public class FabrykaFigurGeometrycznych {
 
 
     public static FiguraGeometryczna dajFigure(String jakatofigura) throws NieznanaFiguraException {
 
-
-        FiguraGeometryczna figura = null;
+        FiguraGeometryczna figura;
         NieznanaFiguraException e = new NieznanaFiguraException("coto sie stalo");
 try{
-
-
         switch (jakatofigura) {
             case "TRÓJKĄT":
                 figura = new Trojkat();

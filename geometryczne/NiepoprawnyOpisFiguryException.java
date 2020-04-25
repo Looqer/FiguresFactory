@@ -1,9 +1,8 @@
 package geometryczne;
 
 public class NiepoprawnyOpisFiguryException extends RuntimeException{
-    public void nieznana(){
 
-        System.out.println("nie rozumiem tego opisu");
+    public NiepoprawnyOpisFiguryException(String errormessage) {
+        super(errormessage);
     }
-
 }

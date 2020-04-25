@@ -27,7 +27,7 @@ public class FiguryReader {
 
             FiguraGeometryczna figurateraz = geometryczne.FabrykaFigurGeometrycznych.dajFigure(linesplitted[0]);
 
-            double[] jakisarrayd = Arrays.stream(linesplitted[2].split(" ")).mapToDouble(Double::parseDouble).toArray();
+            double[] jakisarrayd = Arrays.stream(linesplitted[2].split(",")).mapToDouble(Double::parseDouble).toArray();
 
             try{figurateraz.ustawParametry(jakisarrayd,linesplitted[1]);}
             catch(NullPointerException err){}
